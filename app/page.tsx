@@ -128,6 +128,12 @@ export default function Home() {
     };
   }, [activeRun]);
 
+  const stageNote = useMemo(() => {
+    if (activeStage !== "finalCode") return null;
+
+    return "Currently this project emits TAC as its final visible form. A distinct final-code backend stage can be added later.";
+  }, [activeStage]);
+
   function syncLineNumbers(event: UIEvent<HTMLTextAreaElement>) {
     if (lineNumberRef.current) {
       lineNumberRef.current.scrollTop = event.currentTarget.scrollTop;
@@ -261,6 +267,8 @@ export default function Home() {
                 );
               })}
             </div>
+
+            {stageNote ? <p className="stageNote">{stageNote}</p> : null}
 
             {activeStage === "parseTree" && activeAst && activeStageAvailable && !error ? (
               <AstViewer root={activeAst} />

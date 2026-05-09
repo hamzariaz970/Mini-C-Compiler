@@ -604,6 +604,13 @@ textarea {
   padding-bottom: 2px;
 }
 
+.stageNote {
+  margin: -4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .tab {
   flex: 0 0 auto;
   min-height: 34px;
