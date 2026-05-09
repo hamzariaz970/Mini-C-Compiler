@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { type UIEvent, useMemo, useRef, useState } from "react";
 
 type AstNode = {
@@ -64,7 +65,8 @@ const stages: Array<{ key: StageKey; label: string }> = [
   { key: "symbolTable", label: "Symbols" },
   { key: "ir", label: "IR" },
   { key: "finalCode", label: "Final Code" },
-  { key: "diagnostics", label: "Diagnostics" }
+  { key: "diagnostics", label: "Diagnostics" },
+  { key: "result", label: "Result" }
 ];
 
 function formatNs(value: string) {
@@ -162,7 +164,15 @@ export default function Home() {
       <section className="workspace">
         <div className="topbar">
           <div>
-            <h1>Mini C Compiler Lab</h1>
+            <div className="titleRow">
+              <h1>Mini C Compiler</h1>
+              <Link className="navButton" href="/features">
+                Features
+              </Link>
+              <Link className="navButton subtle" href="/about">
+                Course & Team
+              </Link>
+            </div>
             <p>{statusText}</p>
           </div>
           <div className="actions">
