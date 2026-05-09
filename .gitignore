@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Next.js
+.next/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# C++ build outputs
+src/*.o
+minic
+
+# Temporary editor files
+docs/~$*.docx
+
+# Local backups
+*.bak
+
+# Vercel
+.vercel/

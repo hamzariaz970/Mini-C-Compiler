@@ -1,0 +1,30 @@
+{
+  "name": "mini-c-compiler-web",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "predev": "make",
+    "dev": "next dev --webpack --hostname 0.0.0.0 --port 3000",
+    "prebuild": "make clean && make",
+    "build": "next build",
+    "start": "next start",
+    "test:compiler": "make test"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "postcss": "8.5.14"
+  }
+}
