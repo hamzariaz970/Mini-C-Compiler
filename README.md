@@ -3,6 +3,8 @@
 This project is a **Mini C Compiler** built for a defined subset of the C
 language. It includes:
 
+Live deployment: [mini-c-compiler.vercel.app](https://mini-c-compiler.vercel.app/)
+
 - a C++ compiler pipeline
 - an interactive Next.js frontend
 - integration tests
